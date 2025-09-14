@@ -15,5 +15,9 @@ AddTask.addEventListener('click', function() {
 
 function renderTasks() {
     TaskList.innerHTML = "";
-    
+    tasks.forEach(task => {
+        const li = document.createElement("li")
+        li.textContent = task;
+        TaskList.appenChild(li);
+    })
 }
