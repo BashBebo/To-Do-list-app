@@ -1,24 +1,23 @@
 let tasks = [];
 
-count = Taskinput = document.getElementById("inputb");
-count = AddTask = document.getElementById("addtask");
-count = Tasklist = document.getElementById("Tasklist")
+const taskInput = document.getElementById("inputb");
+const addTask = document.getElementById("addtask");
+const taskList = document.getElementById("TaskList"); // ID must match HTML
 
-AddTask.addEventListener('click', function() {
-    const task = taskinput.value.trim();
+addTask.addEventListener('click', function() {
+    const task = taskInput.value.trim();
     if (task !== "") {
         tasks.push(task);
         renderTasks();
-        taskinput.value = "";
+        taskInput.value = "";
     }
 })
 
 function renderTasks() {
-    TaskList.innerHTML = "";
+    taskList.innerHTML = "";
     tasks.forEach(task => {
-        const li = document.createElement("li")
+        const li = document.createElement("li");
         li.textContent = task;
-        tasklist.appendChild(li);
-
-    })
+        taskList.appendChild(li);
+    });
 }
