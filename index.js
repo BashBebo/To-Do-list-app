@@ -14,5 +14,6 @@ AddTask.addEventListener('click', function() {
 })
 
 function renderTasks() {
+    TaskList.innerHTML = "";
     
 }
