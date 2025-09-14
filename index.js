@@ -2,7 +2,7 @@ let tasks = [];
 
 count = Taskinput = document.getElementById("inputb");
 count = AddTask = document.getElementById("addtask");
-count = TaskList = document.getElementById("TaskList")
+count = Tasklist = document.getElementById("Tasklist")
 
 AddTask.addEventListener('click', function() {
     const task = taskinput.value.trim();
@@ -18,6 +18,7 @@ function renderTasks() {
     tasks.forEach(task => {
         const li = document.createElement("li")
         li.textContent = task;
-        TaskList.appenChild(li);
+        tasklist.appendChild(li);
+
     })
 }
