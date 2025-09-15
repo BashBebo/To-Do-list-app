@@ -24,7 +24,7 @@ function rendertasks () {
             tasks.splice(index, 1);
             rendertasks();
         });
-        li.textContent = task;
+        taskList.appendChild(li);
         li.appendChild(checkbox);
         li.appendChild(document.createTextNode(task));
     });
