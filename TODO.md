@@ -1,0 +1,2 @@
+- [ ] Fix syntax error in event listener for taskadd button in index.js
+- [ ] Implement task adding functionality: get input value, add to task array, create and append li to tasklist, clear input

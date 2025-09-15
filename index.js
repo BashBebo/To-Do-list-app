@@ -1,28 +1,24 @@
-// State: array to store tasks
 let tasks = [];
 
-// Grab elements
-const taskInput = document.getElementById("inputb");
-const addTaskBtn = document.getElementById("addtask");
-const taskList = document.getElementById("Tasklist");
+const taskInput = document.getElementById('taskinput');
+const taskAdd = document.getElementById('taskadd');
+const taskList = document.getElementById('tasklist');
 
-// Function to render tasks
-function renderTasks() {
-    taskList.innerHTML = ""; // clear existing tasks
 
-    tasks.forEach(task => {
-        const li = document.createElement("li");
-        li.textContent = task;  // display the task
-        taskList.appendChild(li); // add to the task list
-    });
-}
-
-// Event listener to add tasks
-addTaskBtn.addEventListener("click", () => {
+taskAdd.addEventListener('click', () => {
     const taskText = taskInput.value.trim();
-    if(taskText !== "") {
-        tasks.push(taskText);  // add task to array
-        renderTasks();         // update the UI
-        taskInput.value = "";  // clear input
-    }
-});
+    if (taskText !== "")
+        tasks.push(taskText);
+    rendertasks();
+    taskInput.value="";
+})
+
+function rendertasks () {
+    taskList.innerHTML="";
+    tasks.forEach(task => {
+        const li = Document.createElement('li');
+        li.textContent = taskText;
+        taskList.appenChild(li);
+    });
+
+}
