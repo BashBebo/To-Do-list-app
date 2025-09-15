@@ -16,10 +16,17 @@ taskAdd.addEventListener('click', () => {
 
 function rendertasks () {
     taskList.innerHTML="";
-    tasks.forEach(task => {
+    tasks.forEach((task , index) => {
         const li = document.createElement('li');
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.addEventListener('click', () => {
+            tasks.splice(index, 1);
+            rendertasks();
+        });
         li.textContent = task;
-        taskList.appendChild(li);
+        li.appendChild(checkbox);
+        li.appendChild(document.createTextNode(task));
     });
 
 }
